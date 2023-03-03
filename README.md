@@ -16,5 +16,4 @@ To generate 2D pore images using variational autoencoder (VAE) benchmarked again
 
 ### Implementation to 3D 
 
-- Use a similar VAE setting to serve as an interpolation between real micro-CT images ad augment an existing dataset for water retention curve prediction.
-
+- Use a similar VAE setting to serve as an interpolation between real micro-CT images and augment an existing dataset for water retention curve prediction.
