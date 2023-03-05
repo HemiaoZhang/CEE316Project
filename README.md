@@ -1,5 +1,7 @@
 # CEE316 Project
 
+To view the animation and size 1000x1000 of the original image in `1_visualize_pore_structure.ipynb`, open the notebook in Colab.
+
 ## Meeting minutes (Fri, 03/03/23)
 
 ### Scope for the class project
