@@ -10,14 +10,18 @@ To generate 2D pore images using variational autoencoder (VAE) benchmarked again
 
 #### Tasks
 
-- Prepare 1k instances of 50-by-50 2D slices from a 1000x1000x1000 [Berea sandstone binary image](https://www.digitalrocksportal.org/projects/317/origin_data/1354/) as the training data.
+- Prepare 1k instances of 200-by-200 2D slices from a 1000x1000x1000 [Berea sandstone binary image](https://www.digitalrocksportal.org/projects/317/origin_data/1354/) as the training data.
 
 - First train a CNN autoencoder using pixel data.
 
-- Then train a VAE using the same dataset. 
+- Then train a VAE using the same dataset.
 
-### Implementation to 3D 
+### Further Implementations
 
-- Use a similar VAE setting to serve as an interpolation between real micro-CT images and augment an existing dataset for water retention curve prediction.
+- Apply a similar VAE setting to 3d voxel data to serve as an interpolation between real micro-CT images and augment an existing dataset for water retention curve prediction.
 
 - Apply physical constraints (e.g., porosity, WRC) to regulate the embedding.
+
+- Use a graph to represent pore structures to reduce the storage. Apply [skeletonization](https://imagej.net/plugins/skeletonize3d) to obtain a graph embedding (e.g., from signed distace function to obtain radii of pore channels at different locations).
+
+- Use principal component analysis to serve as an alternative benchmark test (e.g., JPEG) to CNN autoencoder (i.e., a linear compression-decompression vs. a nonlinear encoding-decoding). Apply singular value decomposition to flattened images; store the largest singular values as the embedding; reconstruct using singular values and corresponding vectors.
